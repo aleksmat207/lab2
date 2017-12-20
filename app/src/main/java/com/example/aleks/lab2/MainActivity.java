@@ -18,47 +18,88 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
+
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.btn) Button btn2;
+    @BindView(R.id.btn1) Button btn1;
+    @BindView(R.id.edit) EditText editText;
+    @BindView(R.id.miasto) TextView miasto;
+
+//    @OnClick(R.id.btn)
+//    void onClick() {
+//        Intent intent = new Intent(MainActivity.this, okno2.class);
+//                startActivity(intent);
+//    }
+    @OnClick(R.id.btn1)
+       void onClick() {
+
+        Intent intent = new Intent(MainActivity.this, okno2.class);
+        String g = editText.getText().toString();
+        miasto.setText(g);
+        Bundle bundle = new Bundle();
+        bundle.putString("item", g);
+        intent.putExtras(bundle);
+//    @OnClick(R.id.btn1)
+//    void onClick() {
+//
+//                Intent intent = new Intent(MainActivity.this, okno2.class);
+//                String g = editText.getText().toString();
+//                miasto.setText(g);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("item", g);
+//               intent.putExtras(bundle);
+//    }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button btn2 = findViewById(R.id.btn);
-        Button btn1 = findViewById(R.id.btn1);
-
-        final EditText editText = findViewById(R.id.edit);
-        final TextView miasto = findViewById(R.id.miasto);
-        btn2.setOnClickListener(new View.OnClickListener()
-
-        {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, okno2.class);
-                startActivity(intent);
-
-            }
+        ButterKnife.bind(this);
+    }
 
 
-        });
-        btn1.setOnClickListener(new View.OnClickListener()
+//        Button btn2 = findViewById(R.id.btn);
+//        Button btn1 = findViewById(R.id.btn1);
 
-        {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, okno2.class);
-                String g = editText.getText().toString();
-                miasto.setText(g);
-                Bundle bundle = new Bundle();
-                bundle.putString("item", g);
-                intent.putExtras(bundle);
+//        final EditText editText = findViewById(R.id.edit);
+//        final TextView miasto = findViewById(R.id.miasto);
 
-            }
+//        btn2.setOnClickListener(new View.OnClickListener()
+//
+//        {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, okno2.class);
+//                startActivity(intent);
+//
+//            }
+//
+//
+//        });
+//        btn1.setOnClickListener(new View.OnClickListener()
+//
+//        {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, okno2.class);
+//                String g = editText.getText().toString();
+//                miasto.setText(g);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("item", g);
+//                intent.putExtras(bundle);
+//
+//            }
+//
+//
+//        }
+//
+//);
 
-
-        });
 
     }
-}
+
 
 
 
