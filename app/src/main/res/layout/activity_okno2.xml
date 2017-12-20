@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aleks.lab2.okno2">
+    tools:context="com.example.aleks.lab2.okno2"
     android:background="@color/colorAccent"
+    >
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <LinearLayout
         android:background="@color/colorAccent"
         android:layout_width="match_parent"

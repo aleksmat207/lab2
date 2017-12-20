@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/andro.iml" filepath="$PROJECT_DIR$/andro.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lab2.iml" filepath="$PROJECT_DIR$/lab2.iml" />
+      <module fileurl="file://C:\Users\aleks\Desktop\andro\lab2.iml" filepath="C:\Users\aleks\Desktop\andro\lab2.iml" />
     </modules>
   </component>
 </project>
